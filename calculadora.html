@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA SIMPLES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="container" >
+
+    <div class="mx-auto" style="width: 300px; height: 50px;">
+        <div class="position-absolute mx-5 mt-5 p-3 border border-dark rounded-3 text-bg-dark">
+            <h4 class="text-end text-info-emphasis bg-dark">CALCULADORA</h4>
+            <div class="display w-auto p-3 text-bg-light border rounded-3 fw-bolder"></div>
+            <table class="table table-borderless ">
+                <tr>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="limpar()">C</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="limparum()"><</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('/')">/</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('*')">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('7')">7</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('8')">8</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('9')">9</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('4')">4</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('5')">5</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('6')">6</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('1')">1</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('2')">2</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" onclick="inserir('3')">3</button></td>
+                    <td rowspan="2" class="bg-warning rounded-3"><button class="btn btn-warning btn-lg" style="height: 110px;" onclick="result()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="bg-light rounded-3"><button class="btn btn-white btn-lg" style="width: 100%;" onclick="inserir('0')">0</button></td>
+                    <td><button class="btn text-dark bg-white btn-lg" style="width: 100%;" onclick="inserir('.')">.</button></td>
+                </tr>
+            </table>
+            <span class="ps-5 fw-bolder text-info-emphasis">@debooramaral - &copy; </span>
+        </div>
+    </div>
+
+    <div class="bg-warning position-absolute end-0 bottom-0 m-5 border rounded" >
+        <a href="index.html" class="border border-dark link-dark border-2 rounded-1 p-1 fs-3 text-decoration-none">Inicio</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- https://www.youtube.com/watch?v=RD1c4IhUe7Q&ab_channel=Prod%C3%AD gioDev -->
