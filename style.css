@@ -4,9 +4,31 @@
 
 /*Responsividade Jogo da Velha*/
 
-@media (max-width: 700px) {
+@media screen and (min-width: 470px) and (max-width: 992px){
+    .quadrado{  
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    .btn{
+        background: ghostwhite;
+        border: none;
+        width: 100%;
+        height: 55px;
 
-    
-    
-    
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1680px){
+    .quadrado{  
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+    .btn{
+        width: 150%;
+        height: 125px;
+    }
 }
