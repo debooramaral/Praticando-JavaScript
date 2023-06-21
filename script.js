@@ -105,3 +105,36 @@ document.querySelector('ul').addEventListener('click', (e) => {
     e.target.classList.toggle('checked')
 })
 // https://discord.com/channels/835773937265934388/1014956019367018627/1076497777066000404
+
+
+// jogo da velha
+
+const currentPlayer = document.querySelector(".currentPlayer");
+
+let selected;
+let player = "X";
+let positions = [
+    [1, 2, 3]
+    [4, 5, 6]
+    [7, 8, 9]
+    [1, 4, 7]
+    [2, 5, 8]
+    [3, 6, 9]
+    [1, 5, 9]
+    [3, 5, 7]
+]; //posições possiveis para ter um ganhador
+
+function init(){
+    selected = [];
+
+    currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+
+    document.querySelectorAll(".game button").forEach((item) => {
+        item.innerHTML = "";
+        item.addEventListener("click", newMove);
+    });
+}
+
+init();
+
+//4:10
