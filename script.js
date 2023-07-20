@@ -46,9 +46,15 @@ const eventsButton = {
         timer.innerHTML = `${formatTime(hour)}:${formatTime(minute)}:${formatTime(second)}`
     }
 }
-buttonPlay.addEventListener('click', eventsButton.play),
-buttonPause.addEventListener('click', eventsButton.pause),
-buttonStop.addEventListener('click', eventsButton.stop),
+
+
+if (buttonPlay, buttonPause, buttonStop){
+    buttonPlay.addEventListener("click", eventsButton.play)
+    buttonPause.addEventListener("click", eventsButton.pause)
+    buttonStop.addEventListener("click", eventsButton.stop)
+}
+
+//correção preventiva jogo da velha, na linha 49 - referencia: https://codingbeautydev.com/blog/javascript-cannot-read-property-addeventlistener-of-null/#:~:text=We%20can%20fix%20the%20%E2%80%9Ccannot,in%20a%20DOMContentLoaded%20event%20listener
 
 function formatTime(timer) {
     if(timer < 10){
@@ -100,10 +106,21 @@ function createCloseButton(li){
 }
 
 document.querySelectorAll('li').forEach(createCloseButton)
-document.querySelector('ul').addEventListener('click', (e) => {
-    if(e.target.tagName === 'LI')
-    e.target.classList.toggle('checked')
+
+//correção de erro, addEventListener
+//referencia: https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    if ('ul'){
+        document.querySelector('ul').addEventListener('click', (e) => {
+            if(e.target.tagName === 'LI')
+            e.target.classList.toggle('checked')
+        })
+    }
 })
+
+
+
 // https://discord.com/channels/835773937265934388/1014956019367018627/1076497777066000404
 
 
